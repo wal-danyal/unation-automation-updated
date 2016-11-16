@@ -1,0 +1,35 @@
+
+<suite name="UnationTestSuite">
+
+
+
+    <listeners>
+		 <!-- <listener class-name="webautomation.Reports"/> -->
+		<listener class-name="webautomation.PDFListener"/>
+	</listeners>	
+
+    <test name="WebAutomation">
+
+
+
+
+
+        <classes>
+            
+          
+
+           <class name="webautomation.LoginSuccess"/>
+            <!--    <class name="webautomation.EditEvent"/>
+                <class name="webautomation.CopyEvent"/>
+            <class name="webautomation.MoreEvents"/>
+            <class name="webautomation.GetApp"/>  -->
+
+           
+        
+
+
+        </classes>
+
+    </test>
+
+</suite>
