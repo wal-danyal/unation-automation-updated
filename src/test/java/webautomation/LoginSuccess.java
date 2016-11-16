@@ -7,12 +7,14 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
+import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.chrome.*;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -43,7 +45,7 @@ public class LoginSuccess
 		{
 			System.setProperty("webdriver.gecko.driver", prop.getProperty("gecko.driver"));
 			driver =new FirefoxDriver();
-			
+
 
 		}
 
@@ -54,7 +56,16 @@ public class LoginSuccess
             driver = new ChromeDriver();
 		  	
 		}
-		
+
+		else if (prop.getProperty("browser").equals("phantom"))
+		{
+			//System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\ChromeDriver\\chromedriver.exe");
+			// ChromeDriverManager.getInstance().setup();
+			PhantomJsDriverManager.getInstance().setup();
+			driver = new PhantomJSDriver();
+
+		}
+
 		else  if (prop.getProperty("browser").equals("ie"))
 		{
 			//InternetExplorerDriverManager.setup();
