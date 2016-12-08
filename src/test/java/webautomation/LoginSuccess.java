@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 
-public class A1LoginSuccess
+public class LoginSuccess
 
 
 {
@@ -30,7 +30,7 @@ public class A1LoginSuccess
 	@BeforeTest
 	public void Setup() throws IOException
 	{
-		InputStream inputStream = A1LoginSuccess.class.getResourceAsStream("metadata.properties");
+		InputStream inputStream = LoginSuccess.class.getResourceAsStream("metadata.properties");
 
 
 
