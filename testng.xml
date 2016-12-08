@@ -19,6 +19,7 @@
           
 
            <class name="webautomation.LoginSuccess"/>
+		<class name="webautomation.PDFListener"/>
             <!--    <class name="webautomation.EditEvent"/>
                 <class name="webautomation.CopyEvent"/>
             <class name="webautomation.MoreEvents"/>
